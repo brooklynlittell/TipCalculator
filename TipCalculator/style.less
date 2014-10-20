@@ -1,0 +1,179 @@
+﻿/* Variables */
+@buttonColor: #000;
+
+/* Mixins */
+.rounded-corners (@radius: 5px) 
+{
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.rotate (@angle: -1deg) {
+    -webkit-transform: rotate( @angle );
+    -moz-transform: rotate( @angle );
+    -ms-transform: rotate( @angle );
+    -o-transform: rotate( @angle );
+    transform: rotate( @angle );
+}
+
+.flexbox()
+{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    //display: box;
+}
+
+.shadow() {
+    -webkit-box-shadow: 2px 2px 15px 0px rgba(1, 1, 1, .9);
+    box-shadow: 2px 2px 15px 0px rgba(1, 1, 1, .9);
+}
+
+/* Styles */
+p, a, h1, h2 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url('woodTex.jpg') repeat;
+    font-size: 6.25%;
+    margin: 15px 0 0 0;
+}
+
+h1 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 40em;
+    text-align: center;
+}
+
+p 
+{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15em;
+    text-align: center;
+}
+
+p:last-of-type
+{
+    padding: 15px 0;
+}
+
+a
+{
+    text-decoration: none;
+    color: #333;
+}
+
+input:focus{
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#pageContainer
+{
+    margin: 0 auto;
+    width: 300px;
+}
+
+#calcContainer
+{
+    width: 100%;
+    background: #fafafa url('paperBG.jpg');
+    .rounded-corners;
+    .rotate;
+    .shadow;
+}
+
+    .spacer
+    {
+        height: 20px;
+        width: 100%;
+    }
+
+    .payContainer
+    {
+        min-height: 50px;
+        width: 100%;
+    }
+
+    .payContainer:last-of-type
+    {
+        width: 94%;
+        min-height: 25px;
+        border-bottom: solid 1px black;
+        margin: 0 auto;
+    }
+
+    label
+    {
+        padding: 25px 10px 0 0;
+        float: right;
+        font-family: 'Noto Sans', sans-serif;
+        text-align: right;
+        font-size: 15em;
+        font-weight: 100;
+    }
+
+    .textboxStyle()
+    {
+        margin: 0 10px 0 0;
+        float: right;
+        color: #111;
+        border: 0;
+        width: 150px;
+        text-align: right;
+        background-color: transparent;
+        font-size: 30em;
+        font-weight: 200;
+        line-height: none;
+        border-bottom: solid 1px #111;
+    }
+
+        #billAmountText
+        {
+            font-family: 'Noto Sans', sans-serif;
+            .textboxStyle;
+        }
+
+        #tipPercentText
+        {
+            font-family: 'Noto Sans', sans-serif;
+            .textboxStyle;
+        }
+
+        #tipAmountText
+        {
+            font-family: 'Patrick Hand SC', cursive;
+            font-weight: 200;
+            .textboxStyle;
+        }
+
+        #totalText
+        {
+            font-family: 'Patrick Hand SC', cursive;
+            font-weight: 200;
+            .textboxStyle;
+        }
+
+    .signature
+    {
+        font-family: 'Yesteryear', cursive;
+        font-size: 30em;
+        line-height: 1.1em;
+        float: right;
+    }
+
+    .signatureTitle
+    {
+        float: left;
+        padding: 0;
+    }
